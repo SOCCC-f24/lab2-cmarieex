@@ -3,13 +3,15 @@ logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 def encrypt(email="abc012"):
     """
-    TODO: What is the objective? 
-
-    Args:
-        TODO: what arguments and data types are expected? (i.e., email)
-
-    Returns:
-        TODO: what varibale and data types are being returned?   
+    cipher.py: encrypts and decrypts email addresses
+    created by: christine roe
+    course number: csc138 en
+    created on: 092824
+    
+    Objective is to encrypt and decrypt an email address that is input by the user. 
+    The arguments can be any letter from a to z and any number from 0 to 9. Data
+    types are string and integer but the integers will be turned into a string. 
+    The variables are the encrypted and decrypted email addresses. Data type string. 
     """
     output = "" 
     len_flag = len(email) != 6
