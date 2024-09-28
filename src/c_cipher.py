@@ -52,7 +52,7 @@ def encrypt(email=input("Enter an email address to encrypt")):
     retVal = email_str
     return retVal 
 
-def decrypt(email="def345"):
+def decrypt(email):
     """
     TODO: What is the objective? 
 
