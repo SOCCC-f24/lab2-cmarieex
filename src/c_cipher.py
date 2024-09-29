@@ -19,19 +19,19 @@ def encrypt(email=input("Enter an email address to encrypt")):
     # keep all updates in the anum_flag (bool) variable
     anum_flag = not (email[:3].isalpha() and email[3:].isdigit()) 
 
-    if len_flag:                         # NOTE: here we provide input validation on length
+    if len_flag:                         # Lengh validation
         output = "Length check failed\n"
         output += "Email must be 6 characters long."
         logging.info(output)
         return output        
-    if anum_flag:                        # NOTE: here we provide input validation on alpha/num
+    if anum_flag:                        # Alpha/digit validation
         output = "alpha num check failed\n"
         output += "Email must have 3 letters followed by 3 digits."
         logging.info(output)
         return output     
         
-    # TODO: fix line below, process our string into a list
-    email_lst = ["a", "b", "c", "0", "1", "2"]
+    # Processes string into a list
+    email_lst = list(email)
         
     # TODO: complete line(s) below, convert EACH new element into a string
     new_ascii = ord(email_lst[0]) + 3    # NOTE: here we extract and update element at 0 
