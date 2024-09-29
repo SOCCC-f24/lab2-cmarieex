@@ -60,20 +60,16 @@ def decrypt(email):
     # input validation
     output = "" 
     len_flag = len(email) != 6
-    # TODO: fix line below and, implement functionality rather than literals
     # keep all updates in the anum_flag (bool) variable
-    # i.e., 
-    #     A = email[:3] (check first half)
-    #     B = email[3:] (check second half)
-    #     enum_flag = A or B
-    anum_flag = email[:3] != 'def' or email[3:] != '345' 
+    
+    anum_flag = not (email[:3].isalpha() and email[3:].isdigit())
 
-    if len_flag:                         # NOTE: here we provide input validation on length
+    if len_flag:                         # Lengh validation
         output = "Length check failed\n"
         output += "Email must be 6 characters long."
         logging.info(output)
         return output        
-    if anum_flag:                        # NOTE: here we provide input validation on alpha/num
+    if anum_flag:                        # Alpha/digit validation
         output = "alpha num check failed\n"
         output += "Email must have 3 letters followed by 3 digits."
         logging.info(output)
