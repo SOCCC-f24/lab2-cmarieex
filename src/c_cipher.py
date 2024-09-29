@@ -33,18 +33,21 @@ def encrypt(email=input("Enter an email address to encrypt")):
     # Processes string into a list
     email_lst = list(email)
         
-    # TODO: complete line(s) below, convert EACH new element into a string
     new_ascii = ord(email_lst[0]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
-        
-    # TODO: fix line below, convert list into a string
-    email_str = "dbc012"
+    #Separates alphas and digits and shifts each up 3 
+    for i in range(len(email_lst)):    
+        if email_lst[i].isalpha():
+            email_lst[i] = chr(ord(email_lst[i]) + 3)
+        elif email_lst[i].isdigit():
+            email_lst[i] = str((int(email_lst[i]) + 3))    
+     # Converts the elements into a string
+    str(email_lst) 
+    # Converts list into a string
+    email_str = ''.join(map(str, email_lst))
 
     # keep all updates in the retVal (str) variablei
-    # i.e.,
-    #    email_str = " some string updates here "
-    #    email_1 = email_str.strip()
-    #    retVal = email_1
+   
     retVal = email_str
     return retVal 
 
