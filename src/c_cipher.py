@@ -15,12 +15,8 @@ def encrypt(email=input("Enter an email address to encrypt")):
     """
     output = "" 
     len_flag = len(email) != 6
-    # TODO: fix line below and, implement functionality rather than literals
+    # Makes sure first 3 characters are alpha and last 3 characters are digit 
     # keep all updates in the anum_flag (bool) variable
-    # i.e., 
-    #     A = email[:3] (check first half)
-    #     B = email[3:] (check second half)
-    #     enum_flag = A or B
     anum_flag = not (email[:3].isalpha() and email[3:].isdigit()) 
 
     if len_flag:                         # NOTE: here we provide input validation on length
