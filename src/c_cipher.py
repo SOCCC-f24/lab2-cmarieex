@@ -21,7 +21,7 @@ def encrypt(email=input("Enter an email address to encrypt")):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = email[:3] != 'abc' or email[3:] != '012' 
+    anum_flag = not (email[:3].isalpha() and email[3:].isdigit()) 
 
     if len_flag:                         # NOTE: here we provide input validation on length
         output = "Length check failed\n"
