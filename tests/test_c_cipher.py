@@ -52,3 +52,5 @@ def test_successful_decryption(caplog):
     result = decrypt("def345")
     assert result == "abc012"
     assert "abc012" not in caplog.text 
+
+    
