@@ -73,14 +73,18 @@ def decrypt(email):
         output = "alpha num check failed\n"
         output += "Email must have 3 letters followed by 3 digits."
         logging.info(output)
-        return output   
+        return output 
+        
+    # Processes string into a list
+    email_lst = list(email)
+    # Separates alphas and digits and shifts down 3 
+    for i in range(len(email_lst)):
+        if email_lst[i].isalpha():
+            email_lst[i] = chr(ord(email_lst[i]) - 3)
+        elif email_lst[i].isdigit():
+            email_lst[i] = str((int(email_lst[i]) - 3))        
+    # Converts list into a string
+    email_str = ''.join(map(str, email_lst))
 
-    # TODO: apply the encrypt pseudocode but shift down 3
-    
-    # keep all updates in the retVal (str) variablei
-    # i.e.,
-    #    email_str = " some string updates here "
-    #    email_1 = email_str.strip()
-    #    retVal = email_1
-    retVal = "aef345"
+    retval = email_str
     return retVal
