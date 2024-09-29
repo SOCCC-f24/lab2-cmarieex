@@ -58,7 +58,7 @@ def decrypt(email):
     The variable being returned is dec email. The data type would be string.    
     """
     # input validation
-output = "" 
+    output = "" 
     len_flag = len(email) != 6
     # keep all updates in the anum_flag (bool) variable
     
