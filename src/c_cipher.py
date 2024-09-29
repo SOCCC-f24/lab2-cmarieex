@@ -47,19 +47,15 @@ def encrypt(email=input("Enter an email address to encrypt")):
     email_str = ''.join(map(str, email_lst))
 
     # keep all updates in the retVal (str) variablei
-   
     retVal = email_str
     return retVal 
 
 def decrypt(email):
-    """
-    TODO: What is the objective? 
-
-    Args:
-        TODO: what arguments and data types are expected? (i.e., email)
-
-    Returns:
-        TODO: what varibale and data types are being returned?   
+     """
+    The objective is to decrypt an email address. 
+    The arguments can be any letter from a to z and any number from 0 to 9 
+        and the data type is string.
+    The variable being returned is dec email. The data type would be string.    
     """
     # input validation
     output = "" 
