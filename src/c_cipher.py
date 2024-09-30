@@ -1,7 +1,7 @@
 import logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
-def encrypt(email=input("Enter an email address to encrypt")):
+def encrypt(email):
     """
     cipher.py: encrypts and decrypts email addresses
     created by: christine roe
