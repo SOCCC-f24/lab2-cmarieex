@@ -2,8 +2,8 @@ import pytest
 import logging
 from src.c_cipher import encrypt, decrypt
 '''Tests encrypt and decrypt'''
-#def test_kick_the_front_tire():
-    #assert encrypt() == 'dbc012'
+def test_kick_the_front_tire():
+    assert encrypt() == 'dbc012'
 
 def test_encrypt_length_error(caplog):
     """Test that a length error message is logged for invalid email size"""
