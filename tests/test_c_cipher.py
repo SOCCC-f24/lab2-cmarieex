@@ -1,4 +1,4 @@
-import pytest
+import pytest -s
 import logging
 from src.c_cipher import encrypt, decrypt
 '''Tests encrypt and decrypt'''
