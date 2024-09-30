@@ -51,7 +51,7 @@ def encrypt(email=input("Enter an email address to encrypt")):
     return retVal 
 
 def decrypt(email):
-     """
+    """
     The objective is to decrypt an email address. 
     The arguments can be any letter from a to z and any number from 0 to 9 
         and the data type is string.
