@@ -27,7 +27,7 @@ def test_successful_encryption(caplog):
     assert result == "def345"
     assert "def345" not in caplog.text 
 
-'''
+
 # def test_kick_the_back_tire():
     # assert decrypt() == 'aef345'
 
@@ -52,5 +52,5 @@ def test_successful_decryption(caplog):
     result = decrypt("def345")
     assert result == "abc012"
     assert "abc012" not in caplog.text 
-'''
+
     
