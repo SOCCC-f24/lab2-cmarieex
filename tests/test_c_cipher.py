@@ -28,8 +28,8 @@ def test_successful_encryption(caplog):
     assert "def345" not in caplog.text 
 
 '''
-def test_kick_the_back_tire():
-    assert decrypt() == 'aef345'
+# def test_kick_the_back_tire():
+    # assert decrypt() == 'aef345'
 
 def test_decrypt_length_error(caplog):
     """Test that a length error message is logged for invalid email size"""
