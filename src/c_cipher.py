@@ -47,10 +47,9 @@ def encrypt(email):
     new_ascii = ord(email_lst[5]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[5] = chr(new_ascii)
 
-     # Converts the elements into a string
-    str(email_lst) 
+    
     # Converts list into a string
-    email_str = ''.join(map(str, email_lst))
+    email_str = ''.join(email_lst))
 
     # keep all updates in the retVal (str) variablei
     retVal = email_str
@@ -99,7 +98,7 @@ def decrypt(email):
     email_lst[5] = chr(new_ascii)
             
     # Converts list into a string
-    email_str = ''.join(map(str, email_lst))
+    email_str = ''.join(email_lst)
 
     retval = email_str
     return retVal
