@@ -49,7 +49,7 @@ def encrypt(email):
 
     
     # Converts list into a string
-    email_str = ''.join(email_lst))
+    email_str = ''.join(email_lst)
 
     # keep all updates in the retVal (str) variablei
     retVal = email_str
@@ -100,5 +100,5 @@ def decrypt(email):
     # Converts list into a string
     email_str = ''.join(email_lst)
 
-    retval = email_str
+    retVal = email_str
     return retVal
