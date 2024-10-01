@@ -40,9 +40,9 @@ def encrypt(email):
     email_lst[1] = chr(new_ascii) 
     new_ascii = ord(email_lst[2]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[2] = chr(new_ascii)
-    new_ascii = ord(email_lst[3) + 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[3]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[3] = chr(new_ascii)
-    new_ascii = ord(email_lst[4) + 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[4]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[4] = chr(new_ascii) 
     new_ascii = ord(email_lst[5]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[5] = chr(new_ascii)
@@ -91,9 +91,9 @@ def decrypt(email):
     email_lst[1] = chr(new_ascii) 
     new_ascii = ord(email_lst[2]) - 3    # NOTE: here we extract and update element at 0 
     email_lst[2] = chr(new_ascii)
-    new_ascii = ord(email_lst[3) - 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[3]) - 3    # NOTE: here we extract and update element at 0 
     email_lst[3] = chr(new_ascii)
-    new_ascii = ord(email_lst[4) - 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[4]) - 3    # NOTE: here we extract and update element at 0 
     email_lst[4] = chr(new_ascii) 
     new_ascii = ord(email_lst[5]) - 3    # NOTE: here we extract and update element at 0 
     email_lst[5] = chr(new_ascii)
