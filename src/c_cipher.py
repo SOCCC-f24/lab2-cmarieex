@@ -36,11 +36,17 @@ def encrypt(email):
     new_ascii = ord(email_lst[0]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
     #Separates alphas and digits and shifts each up 3 
-    for i in range(len(email_lst)):    
-        if email_lst[i].isalpha():
-            email_lst[i] = chr(ord(email_lst[i]) + 3)
-        elif email_lst[i].isdigit():
-            email_lst[i] = str((int(email_lst[i]) + 3))    
+    new_ascii = ord(email_lst[1]) + 3    # NOTE: here we extract and update element at 0 
+    email_lst[1] = chr(new_ascii) 
+    new_ascii = ord(email_lst[2]) + 3    # NOTE: here we extract and update element at 0 
+    email_lst[2] = chr(new_ascii)
+    new_ascii = ord(email_lst[3) + 3    # NOTE: here we extract and update element at 0 
+    email_lst[3] = chr(new_ascii)
+    new_ascii = ord(email_lst[4) + 3    # NOTE: here we extract and update element at 0 
+    email_lst[4] = chr(new_ascii) 
+    new_ascii = ord(email_lst[5]) + 3    # NOTE: here we extract and update element at 0 
+    email_lst[5] = chr(new_ascii)
+
      # Converts the elements into a string
     str(email_lst) 
     # Converts list into a string
@@ -77,12 +83,21 @@ def decrypt(email):
         
     # Processes string into a list
     email_lst = list(email)
-    # Separates alphas and digits and shifts down 3 
-    for i in range(len(email_lst)):
-        if email_lst[i].isalpha():
-            email_lst[i] = chr(ord(email_lst[i]) - 3)
-        elif email_lst[i].isdigit():
-            email_lst[i] = str((int(email_lst[i]) - 3))        
+
+    #Separates alphas and digits and shifts each up 3
+    new_ascii = ord(email_lst[0]) - 3    # NOTE: here we extract and update element at 0 
+    email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
+    new_ascii = ord(email_lst[1]) - 3    # NOTE: here we extract and update element at 0 
+    email_lst[1] = chr(new_ascii) 
+    new_ascii = ord(email_lst[2]) - 3    # NOTE: here we extract and update element at 0 
+    email_lst[2] = chr(new_ascii)
+    new_ascii = ord(email_lst[3) - 3    # NOTE: here we extract and update element at 0 
+    email_lst[3] = chr(new_ascii)
+    new_ascii = ord(email_lst[4) - 3    # NOTE: here we extract and update element at 0 
+    email_lst[4] = chr(new_ascii) 
+    new_ascii = ord(email_lst[5]) - 3    # NOTE: here we extract and update element at 0 
+    email_lst[5] = chr(new_ascii)
+            
     # Converts list into a string
     email_str = ''.join(map(str, email_lst))
 
