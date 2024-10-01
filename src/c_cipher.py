@@ -36,37 +36,36 @@ def encrypt(email):
     new_ascii = ord(email_lst[0]) + 3    # NOTE: here we extract and update element at 0 
     email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
     #Separates alphas and digits and shifts each up 3 
-    new_ascii = ord(email_lst[1]) + 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[1]) + 3    # NOTE: here we extract and update element at 1 
     email_lst[1] = chr(new_ascii) 
-    new_ascii = ord(email_lst[2]) + 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[2]) + 3    # NOTE: here we extract and update element at 2 
     email_lst[2] = chr(new_ascii)
-    new_ascii = ord(email_lst[3]) + 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[3]) + 3    # NOTE: here we extract and update element at 3 
     email_lst[3] = chr(new_ascii)
-    new_ascii = ord(email_lst[4]) + 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[4]) + 3    # NOTE: here we extract and update element at 4 
     email_lst[4] = chr(new_ascii) 
-    new_ascii = ord(email_lst[5]) + 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[5]) + 3    # NOTE: here we extract and update element at 5 
     email_lst[5] = chr(new_ascii)
 
     
     # Converts list into a string
     email_str = ''.join(email_lst)
 
-    # keep all updates in the retVal (str) variablei
+    # keep all updates in the retVal (str) variable
     retVal = email_str
     return retVal 
 
 def decrypt(email):
     """
     The objective is to decrypt an email address. 
-    The arguments can be any letter from a to z and any number from 0 to 9 
-        and the data type is string.
-    The variable being returned is dec email. The data type would be string.    
+    The arguments can be any letter from a to z and any number from 0 to 9. 
+    The data types are string and integer, with both being converted into a single string.
+    The variable being returned is decrypt email. The data type would be string.    
     """
     # input validation
     output = "" 
     len_flag = len(email) != 6
     # keep all updates in the anum_flag (bool) variable
-    
     anum_flag = not (email[:3].isalpha() and email[3:].isdigit())
 
     if len_flag:                         # Lengh validation
@@ -86,15 +85,15 @@ def decrypt(email):
     #Separates alphas and digits and shifts each up 3
     new_ascii = ord(email_lst[0]) - 3    # NOTE: here we extract and update element at 0 
     email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
-    new_ascii = ord(email_lst[1]) - 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[1]) - 3    # NOTE: here we extract and update element at 1 
     email_lst[1] = chr(new_ascii) 
-    new_ascii = ord(email_lst[2]) - 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[2]) - 3    # NOTE: here we extract and update element at 2 
     email_lst[2] = chr(new_ascii)
-    new_ascii = ord(email_lst[3]) - 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[3]) - 3    # NOTE: here we extract and update element at 3 
     email_lst[3] = chr(new_ascii)
-    new_ascii = ord(email_lst[4]) - 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[4]) - 3    # NOTE: here we extract and update element at 4 
     email_lst[4] = chr(new_ascii) 
-    new_ascii = ord(email_lst[5]) - 3    # NOTE: here we extract and update element at 0 
+    new_ascii = ord(email_lst[5]) - 3    # NOTE: here we extract and update element at 5 
     email_lst[5] = chr(new_ascii)
             
     # Converts list into a string
